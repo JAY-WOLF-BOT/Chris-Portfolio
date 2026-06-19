@@ -1,0 +1,134 @@
+/* Reset margin/padding to prevent accidental scrolling */
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+body {
+  overflow: hidden; /* This prevents the scroll bar */
+  font-family: sans-serif;
+  background-color: #191919;
+}
+
+.intro-container {
+  display: flex;
+  flex-direction: column;
+  height: 100vh; /* Takes full height of the screen */
+  width: 100vw;
+  align-items: center;
+}
+
+.intro-image {
+  width: 100%;
+  height: 60vh; /* Covers exactly half the screen */
+  overflow: hidden;
+  box-shadow: 0px 10px 20px -5px rgba(147, 51, 234, 0.3);
+  animation: slideDown 1.2s ease-out; /* The rectangle coming down */
+}
+
+.intro-image img {
+  width: 100%;
+  height: 100%;
+  object-fit: cover; /* Keeps image from looking stretched */
+}
+
+.intro-text {
+  height: 40vh; /* Bottom half of the screen */
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  text-align: center;
+  animation: fadeIn 2s ease-in;
+}
+
+h1 {
+  font-size: 2.5rem;
+  margin-bottom: 20px;
+  background: linear-gradient(180deg, #fff, #9333ea);
+  -webkit-background-clip: text;
+  background-clip: text;
+  color: transparent;
+  text-shadow: 2px 2px 10px rgba(168, 85, 247, 0.6);
+  animation: float 3s ease-in-out infinite; /* Moving up and down */
+}
+
+.enter-btn {
+  position: relative;
+  display: inline-block;
+  /* Increased padding for a larger footprint */
+  padding: 20px 60px; 
+  /* Larger font size for better readability */
+  font-size: 1.2rem;
+  background-color: transparent;
+  color: #c084fc;
+  text-decoration: none;
+  font-weight: bold;
+  border-radius: 12px; /* Slightly rounder corners for the larger size */
+  z-index: 1;
+  overflow: hidden; 
+  transition: all 0.4s;
+  /* Thicker border track for the rotating line */
+  border: 4px solid transparent; 
+}
+
+/* The Animated Purple Line */
+.enter-btn::before {
+ content: "";
+  position: absolute;
+  top: 50%; /* Start at the center */
+  left: 50%; /* Start at the center */
+  width: 250%; 
+  height: 250%;
+  background: conic-gradient(transparent, #9333ea, transparent 30%);
+  animation: rotateBorder 2s linear infinite;
+  z-index: -2;
+  animation: rotateBorder 3s linear infinite;
+  transform-origin: center;
+  z-index: -2;
+}
+
+/* The Background "Shield" to create the inner space */
+.enter-btn::after {
+  content: "";
+  position: absolute;
+  /* This matches the 4px border to keep the line visible */
+  inset: 4px; 
+  background: white; 
+  border-radius: 8px; /* Adjusted to fit the outer radius */
+  z-index: -1;
+  transition: background 0.4s;
+}
+
+/* Hover Effect */
+.enter-btn:hover {
+  color: #fff;
+  transition: 0.5s;
+}
+
+.enter-btn:hover::after {
+  background-color: #9333ea; 
+}
+
+/* Animations */
+
+@keyframes slideDown {
+  from { transform: translateY(-100%); }
+  to { transform: translateY(0); }
+}
+
+@keyframes fadeIn {
+  from { opacity: 0; }
+  to { opacity: 1; }
+}
+
+@keyframes float {
+  0%, 100% { transform: translateY(0); }
+  50% { transform: translateY(-10px); }
+}
+
+@keyframes rotateBorder {
+  from { transform: translate(-50%, -50%) rotate(0deg); }
+  to { transform: translate(-50%, -50%) rotate(360deg); }
+}

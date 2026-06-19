@@ -1,0 +1,432 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Creative Portfolio</title>
+    <script src="https://cdn.tailwindcss.com"></script>
+    <link href="https://fonts.googleapis.com/css2?family=Plus+Jakarta+Sans:wght@300;400;600;700&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
+    <link href="https://unpkg.com/aos@2.3.1/dist/aos.css" rel="stylesheet">
+    
+    <style>
+        body {
+            font-family: 'Plus Jakarta Sans', sans-serif;
+            background-color: #0b0712;
+            color: #f3f4f6;
+            overflow-x: hidden;
+        }
+        /* Custom Purple Utilities matching #9333ea */
+        .text-purple-brand { color: #9333ea; }
+        .bg-purple-brand { background-color: #9333ea; }
+        .border-purple-brand { border-color: #9333ea; }
+        .hover\:bg-purple-brand-dark:hover { background-color: #7c2d12; }
+        
+        /* Smooth backdrop blur for glassmorphism header */
+        .glass-nav {
+            background: rgba(11, 7, 18, 0.75);
+            backdrop-filter: blur(12px);
+            border-bottom: 1px solid rgba(147, 51, 234, 0.1);
+        }
+
+        /* Pagination Slider Transitions */
+        .slide {
+            display: none;
+            opacity: 0;
+            transition: opacity 0.5s ease-in-out;
+        }
+        .slide.active {
+            display: grid;
+            opacity: 1;
+        }
+        
+        /* Custom focus glow for form inputs */
+        .form-input:focus {
+            outline: none;
+            border-color: #9333ea;
+            box-shadow: 0 0 15px rgba(147, 51, 234, 0.3);
+        }
+    </style>
+</head>
+<body class="antialiased">
+
+    <nav class="glass-nav fixed top-0 left-0 right-0 z-50 transition-all duration-300">
+        <div class="max-w-7xl mx-auto px-6 h-20 flex items-center justify-between">
+            <a href="#" class="text-xl font-bold tracking-wider text-white">
+                CREATIVE<span class="text-purple-brand">.</span>
+            </a>
+            
+            <div class="hidden md:flex items-center space-x-10 text-sm font-medium tracking-wide">
+                <a href="#work" class="text-gray-300 hover:text-purple-brand transition-colors relative after:absolute after:bottom-[-4px] after:left-0 after:w-0 after:h-[2px] after:bg-purple-brand hover:after:w-full after:transition-all">Work</a>
+                <a href="#videos" class="text-gray-300 hover:text-purple-brand transition-colors relative after:absolute after:bottom-[-4px] after:left-0 after:w-0 after:h-[2px] after:bg-purple-brand hover:after:w-full after:transition-all">Videos</a>
+                <a href="#about" class="text-gray-300 hover:text-purple-brand transition-colors relative after:absolute after:bottom-[-4px] after:left-0 after:w-0 after:h-[2px] after:bg-purple-brand hover:after:w-full after:transition-all">About</a>
+                <a href="#contact" class="text-gray-300 hover:text-purple-brand transition-colors relative after:absolute after:bottom-[-4px] after:left-0 after:w-0 after:h-[2px] after:bg-purple-brand hover:after:w-full after:transition-all">Contact</a>
+            </div>
+
+            <a href="#contact" class="bg-purple-brand text-white px-5 py-2.5 rounded-full text-sm font-semibold shadow-[0_4px_20px_rgba(147,51,234,0.3)] hover:shadow-[0_4px_25px_rgba(147,51,234,0.5)] transition-all duration-300 transform hover:-translate-y-0.5">
+                Let's Talk
+            </a>
+        </div>
+    </nav>
+
+    <section id="work" class="pt-32 pb-24 px-6 max-w-7xl mx-auto">
+        <div class="text-center mb-12" data-aos="fade-up">
+            <span class="text-purple-brand tracking-[0.25em] text-xs font-bold uppercase block mb-3">Portfolio Showcase</span>
+            <h1 class="text-3xl md:text-5xl font-bold tracking-tight text-white mb-4">What I Do</h1>
+            <div class="h-1 w-12 bg-purple-brand mx-auto rounded-full"></div>
+        </div>
+
+        <div class="relative bg-gradient-to-b from-[#160f24] to-[#110b1c] rounded-3xl p-6 md:p-12 border border-purple-900/20 shadow-2xl" data-aos="fade-up" data-aos-delay="100">
+            
+            <div class="slide active grid md:grid-cols-2 gap-8 items-center">
+                <div class="overflow-hidden rounded-2xl border border-purple-500/10 group">
+                    <img src="Gemini_Generated_Image_8v7nsj8v7nsj8v7n.png" alt="Motion Graphics Portfolio" class="w-full h-[350px] object-cover group-hover:scale-105 transition-transform duration-700">
+                </div>
+                <div class="space-y-5">
+                    <span class="bg-purple-900/40 text-purple-300 border border-purple-500/30 px-3 py-1 rounded-full text-xs font-semibold uppercase tracking-wider inline-block">Motion & 3D</span>
+                    <h3 class="text-2xl md:text-3xl font-bold text-white">Breathe Life Into Static Design</h3>
+                    <p class="text-gray-400 leading-relaxed">Transforming flat concepts into dynamic, high-fidelity visual experiences. From complex hard-surface mechanical animations and abstract 3D loops to title sequences and promotional video elements, I craft fluid movement that tells an unforgettable story.</p>
+                    <button class="bg-purple-brand text-white px-6 py-3 rounded-xl font-semibold text-sm hover:bg-purple-700 transition-colors">View Case Study</button>
+                </div>
+            </div>
+
+            <div class="slide grid md:grid-cols-2 gap-8 items-center">
+                <div class="overflow-hidden rounded-2xl border border-purple-500/10 group">
+                    <img src="Gemini_Generated_Image_wpipatwpipatwpip.png" alt="Graphics Portfolio" class="w-full h-[350px] object-cover group-hover:scale-105 transition-transform duration-700">
+                </div>
+                <div class="space-y-5">
+                    <span class="bg-purple-900/40 text-purple-300 border border-purple-500/30 px-3 py-1 rounded-full text-xs font-semibold uppercase tracking-wider inline-block">Visual Design</span>
+                    <h3 class="text-2xl md:text-3xl font-bold text-white">Crafting Definitive Visual Identities</h3>
+                    <p class="text-gray-400 leading-relaxed">Where structure meets raw creativity. I design high-impact graphics, clean typography layouts, digital assets, and comprehensive brand materials that look exceptionally sharp and instantly establish professional credibility.</p>
+                    <button class="bg-purple-brand text-white px-6 py-3 rounded-xl font-semibold text-sm hover:bg-purple-700 transition-colors">View Case Study</button>
+                </div>
+            </div>
+
+            <div class="slide grid md:grid-cols-2 gap-8 items-center">
+                <div class="overflow-hidden rounded-2xl border border-purple-500/10 group">
+                    <img src="Gemini_Generated_Image_g1by04g1by04g1by.png" alt="Video Editing Portfolio" class="w-full h-[350px] object-cover group-hover:scale-105 transition-transform duration-700">
+                </div>
+                <div class="space-y-5">
+                    <span class="bg-purple-900/40 text-purple-300 border border-purple-500/30 px-3 py-1 rounded-full text-xs font-semibold uppercase tracking-wider inline-block">Post-Production</span>
+                    <h3 class="text-2xl md:text-3xl font-bold text-white">Cinematic Editing & Storytelling</h3>
+                    <p class="text-gray-400 leading-relaxed">Piecing together fragments into a compelling narrative masterpiece. Specializing in high-fidelity video production, precision pacing, color grading, and seamless audio synchronization to create short documentaries and promotional content that resonate deeply.</p>
+                    <button class="bg-purple-brand text-white px-6 py-3 rounded-xl font-semibold text-sm hover:bg-purple-700 transition-colors">View Case Study</button>
+                </div>
+            </div>
+
+            <button onclick="prevSlide()" class="absolute left-4 top-1/2 -translate-y-1/2 w-10 h-10 rounded-full bg-purple-950/60 border border-purple-500/30 flex items-center justify-center text-white hover:bg-purple-brand transition-colors z-10">
+                <i class="fa-solid fa-chevron-left text-xs"></i>
+            </button>
+            <button onclick="nextSlide()" class="absolute right-4 top-1/2 -translate-y-1/2 w-10 h-10 rounded-full bg-purple-950/60 border border-purple-500/30 flex items-center justify-center text-white hover:bg-purple-brand transition-colors z-10">
+                <i class="fa-solid fa-chevron-right text-xs"></i>
+            </button>
+
+            <div class="flex justify-center space-x-2 mt-8">
+                <span class="dot w-2.5 h-2.5 rounded-full bg-purple-800 cursor-pointer transition-all duration-300 active bg-purple-brand w-6" onclick="currentSlide(0)"></span>
+                <span class="dot w-2.5 h-2.5 rounded-full bg-purple-800 cursor-pointer transition-all duration-300" onclick="currentSlide(1)"></span>
+                <span class="dot w-2.5 h-2.5 rounded-full bg-purple-800 cursor-pointer transition-all duration-300" onclick="currentSlide(2)"></span>
+            </div>
+        </div>
+    </section>
+
+    <section id="videos" class="py-24 bg-[#08040e] px-6">
+        <div class="max-w-7xl mx-auto">
+            <div class="text-center mb-16" data-aos="fade-up">
+                <span class="text-purple-brand tracking-[0.25em] text-xs font-bold uppercase block mb-3">Video Stories</span>
+                <h2 class="text-3xl md:text-4xl font-bold text-white mb-4">Featured Motion Work</h2>
+                <div class="h-1 w-12 bg-purple-brand mx-auto rounded-full"></div>
+            </div>
+
+            <div class="mb-16 max-w-4xl mx-auto" data-aos="zoom-in" data-aos-duration="800">
+                <div class="relative aspect-video rounded-3xl overflow-hidden border border-purple-500/20 shadow-[0_0_50px_rgba(147,51,234,0.15)] bg-purple-950/20">
+                    <video id="mainFeaturedPlayer" class="w-full h-full object-cover" controls autoplay muted>
+                        <source id="videoSource" src="" type="video/mp4">
+                        Your browser does not support the video tag.
+                    </video>
+                    
+                    <div class="absolute bottom-4 left-4 bg-black/70 backdrop-blur-md px-4 py-2 rounded-xl border border-white/5">
+                        <p class="text-xs text-purple-300 font-semibold tracking-wider uppercase mb-0.5">Now Displaying</p>
+                        <h4 id="mainVideoTitle" class="text-sm font-bold text-white">Loading project reels...</h4>
+                    </div>
+                </div>
+            </div>
+
+            <div class="grid sm:grid-cols-2 lg:grid-cols-4 gap-8" data-aos="fade-up">
+                <div onclick="playSelectedVideo('0413(3).mp4', 'Project Video 1')" class="group cursor-pointer bg-[#120c1c] rounded-2xl overflow-hidden border border-purple-900/20 hover:border-purple-500/40 transition-all duration-300 transform hover:-translate-y-1">
+                    <div class="relative aspect-video overflow-hidden">
+                        <img src="https://images.unsplash.com/photo-1611162617213-7d7a39e9b1d7?auto=format&fit=crop&w=600&q=80" alt="Video Cover 1" class="w-full h-full object-cover group-hover:scale-105 transition-transform duration-500">
+                        <div class="absolute inset-0 bg-purple-950/40 opacity-0 group-hover:opacity-100 transition-opacity flex items-center justify-center">
+                            <div class="w-12 h-12 rounded-full bg-purple-brand flex items-center justify-center text-white shadow-lg shadow-purple-500/50 transform scale-75 group-hover:scale-100 transition-transform duration-300">
+                                <i class="fa-solid fa-play ml-0.5"></i>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="p-5 flex items-center justify-between">
+                        <div>
+                            <h4 class="font-bold text-white group-hover:text-purple-brand transition-colors">Project Video 1</h4>
+                            <p class="text-xs text-gray-400 mt-1">Duration: 2:15</p>
+                        </div>
+                        <i class="fa-solid fa-circle-play text-xl text-purple-500/40 group-hover:text-purple-brand transition-colors"></i>
+                    </div>
+                </div>
+                <div onclick="playSelectedVideo('ANGEL COOKS CORRECTION DONE.mp4', 'Project Video 2')" class="group cursor-pointer bg-[#120c1c] rounded-2xl overflow-hidden border border-purple-900/20 hover:border-purple-500/40 transition-all duration-300 transform hover:-translate-y-1">
+                    <div class="relative aspect-video overflow-hidden">
+                        <img src="https://images.unsplash.com/photo-1492691527719-9d1e07e534b4?auto=format&fit=crop&w=600&q=80" alt="Video Cover 2" class="w-full h-full object-cover group-hover:scale-105 transition-transform duration-500">
+                        <div class="absolute inset-0 bg-purple-950/40 opacity-0 group-hover:opacity-100 transition-opacity flex items-center justify-center">
+                            <div class="w-12 h-12 rounded-full bg-purple-brand flex items-center justify-center text-white shadow-lg shadow-purple-500/50 transform scale-75 group-hover:scale-100 transition-transform duration-300">
+                                <i class="fa-solid fa-play ml-0.5"></i>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="p-5 flex items-center justify-between">
+                        <div>
+                            <h4 class="font-bold text-white group-hover:text-purple-brand transition-colors">Project Video 2</h4>
+                            <p class="text-xs text-gray-400 mt-1">Duration: 3:40</p>
+                        </div>
+                        <i class="fa-solid fa-circle-play text-xl text-purple-500/40 group-hover:text-purple-brand transition-colors"></i>
+                    </div>
+                </div>
+                <div onclick="playSelectedVideo('ANGEL COPERATION GALA SOUND .mp4', 'Project Video 3')" class="group cursor-pointer bg-[#120c1c] rounded-2xl overflow-hidden border border-purple-900/20 hover:border-purple-500/40 transition-all duration-300 transform hover:-translate-y-1">
+                    <div class="relative aspect-video overflow-hidden">
+                        <img src="https://images.unsplash.com/photo-1550745165-9bc0b252726f?auto=format&fit=crop&w=600&q=80" alt="Video Cover 3" class="w-full h-full object-cover group-hover:scale-105 transition-transform duration-500">
+                        <div class="absolute inset-0 bg-purple-950/40 opacity-0 group-hover:opacity-100 transition-opacity flex items-center justify-center">
+                            <div class="w-12 h-12 rounded-full bg-purple-brand flex items-center justify-center text-white shadow-lg shadow-purple-500/50 transform scale-75 group-hover:scale-100 transition-transform duration-300">
+                                <i class="fa-solid fa-play ml-0.5"></i>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="p-5 flex items-center justify-between">
+                        <div>
+                            <h4 class="font-bold text-white group-hover:text-purple-brand transition-colors">Project Video 3</h4>
+                            <p class="text-xs text-gray-400 mt-1">Duration: 1:45</p>
+                        </div>
+                        <i class="fa-solid fa-circle-play text-xl text-purple-500/40 group-hover:text-purple-brand transition-colors"></i>
+                    </div>
+                </div>
+                <div onclick="playSelectedVideo('Angel Gala New.mp4', 'Project Video 4')" class="group cursor-pointer bg-[#120c1c] rounded-2xl overflow-hidden border border-purple-900/20 hover:border-purple-500/40 transition-all duration-300 transform hover:-translate-y-1">
+                    <div class="relative aspect-video overflow-hidden">
+                        <img src="https://images.unsplash.com/photo-1506744038136-46273834b3fb?auto=format&fit=crop&w=600&q=80" alt="Video Cover 4" class="w-full h-full object-cover group-hover:scale-105 transition-transform duration-500">
+                        <div class="absolute inset-0 bg-purple-950/40 opacity-0 group-hover:opacity-100 transition-opacity flex items-center justify-center">
+                            <div class="w-12 h-12 rounded-full bg-purple-brand flex items-center justify-center text-white shadow-lg shadow-purple-500/50 transform scale-75 group-hover:scale-100 transition-transform duration-300">
+                                <i class="fa-solid fa-play ml-0.5"></i>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="p-5 flex items-center justify-between">
+                        <div>
+                            <h4 class="font-bold text-white group-hover:text-purple-brand transition-colors">Project Video 4</h4>
+                            <p class="text-xs text-gray-400 mt-1">Duration: 2:05</p>
+                        </div>
+                        <i class="fa-solid fa-circle-play text-xl text-purple-500/40 group-hover:text-purple-brand transition-colors"></i>
+                    </div>
+                </div>
+                <div onclick="playSelectedVideo('Angel Tv Sports.mp4', 'Project Video 5')" class="group cursor-pointer bg-[#120c1c] rounded-2xl overflow-hidden border border-purple-900/20 hover:border-purple-500/40 transition-all duration-300 transform hover:-translate-y-1">
+                    <div class="relative aspect-video overflow-hidden">
+                        <img src="https://images.unsplash.com/photo-1465101046530-73398c7f28ca?auto=format&fit=crop&w=600&q=80" alt="Video Cover 5" class="w-full h-full object-cover group-hover:scale-105 transition-transform duration-500">
+                        <div class="absolute inset-0 bg-purple-950/40 opacity-0 group-hover:opacity-100 transition-opacity flex items-center justify-center">
+                            <div class="w-12 h-12 rounded-full bg-purple-brand flex items-center justify-center text-white shadow-lg shadow-purple-500/50 transform scale-75 group-hover:scale-100 transition-transform duration-300">
+                                <i class="fa-solid fa-play ml-0.5"></i>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="p-5 flex items-center justify-between">
+                        <div>
+                            <h4 class="font-bold text-white group-hover:text-purple-brand transition-colors">Project Video 5</h4>
+                            <p class="text-xs text-gray-400 mt-1">Duration: 2:30</p>
+                        </div>
+                        <i class="fa-solid fa-circle-play text-xl text-purple-500/40 group-hover:text-purple-brand transition-colors"></i>
+                    </div>
+                </div>
+                <div onclick="playSelectedVideo('GHANA MONTH.mp4', 'Project Video 6')" class="group cursor-pointer bg-[#120c1c] rounded-2xl overflow-hidden border border-purple-900/20 hover:border-purple-500/40 transition-all duration-300 transform hover:-translate-y-1">
+                    <div class="relative aspect-video overflow-hidden">
+                        <img src="https://images.unsplash.com/photo-1507238691740-187a5b1d37b8?auto=format&fit=crop&w=600&q=80" alt="Video Cover 6" class="w-full h-full object-cover group-hover:scale-105 transition-transform duration-500">
+                        <div class="absolute inset-0 bg-purple-950/40 opacity-0 group-hover:opacity-100 transition-opacity flex items-center justify-center">
+                            <div class="w-12 h-12 rounded-full bg-purple-brand flex items-center justify-center text-white shadow-lg shadow-purple-500/50 transform scale-75 group-hover:scale-100 transition-transform duration-300">
+                                <i class="fa-solid fa-play ml-0.5"></i>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="p-5 flex items-center justify-between">
+                        <div>
+                            <h4 class="font-bold text-white group-hover:text-purple-brand transition-colors">Project Video 6</h4>
+                            <p class="text-xs text-gray-400 mt-1">Duration: 2:10</p>
+                        </div>
+                        <i class="fa-solid fa-circle-play text-xl text-purple-500/40 group-hover:text-purple-brand transition-colors"></i>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <section id="about" class="py-24 px-6 max-w-5xl mx-auto">
+        <div class="grid md:grid-cols-12 gap-12 items-center">
+            
+            <div class="md:col-span-5 relative flex justify-center" data-aos="fade-right">
+                <div class="relative w-72 h-85 rounded-2xl overflow-hidden border-2 border-purple-500/30 shadow-2xl z-10 bg-gradient-to-t from-purple-950 to-transparent">
+                    <img src="WhatsApp Image 2026-05-26 at 7.01.51 PM.jpeg" alt="Creator Portrait" class="w-full h-full object-cover mix-blend-luminosity hover:mix-blend-normal transition-all duration-500">
+                </div>
+                <div class="absolute -bottom-4 -right-4 w-72 h-85 rounded-2xl border border-purple-600/20 bg-purple-600/5 z-0"></div>
+            </div>
+
+            <div class="md:col-span-7 space-y-6" data-aos="fade-left">
+                <span class="text-purple-brand tracking-[0.25em] text-xs font-bold uppercase block">Who I Am</span>
+                <h2 class="text-3xl md:text-4xl font-bold text-white">Hi, I'm Chris Lartey Yeboah</h2>
+                <p class="text-gray-400 leading-relaxed">
+                    I am a digital video editor, motion graphics designer, and a multidisciplinary multimedia creative. My work is all about execution and impact—helping personal brands, companies, and filmmakers cut through the noise with visuals that demand attention.
+                    Specializing in UI/UX design, Visual Graphics, Motion Graphics, and advanced Post-Production, I handle assets from the initial wireframe and design layout all the way through to the final rendered frame. 
+                    I don't just edit or design; I craft comprehensive visual identities that elevate brands and bring cinematic narratives to life                
+                </p>
+                                    
+                <div class="pt-2">
+                    <p class="text-sm font-semibold text-white mb-3">Core Expertise</p>
+                    <div class="flex flex-wrap gap-2.5">
+                        <span class="bg-[#191129] border border-purple-500/20 px-4 py-1.5 rounded-full text-xs text-purple-300 font-medium">Motion Graphics</span>
+                        <span class="bg-[#191129] border border-purple-500/20 px-4 py-1.5 rounded-full text-xs text-purple-300 font-medium">Visual Graphics</span>
+                        <span class="bg-[#191129] border border-purple-500/20 px-4 py-1.5 rounded-full text-xs text-purple-300 font-medium">UI/UX Architecture</span>
+                        <span class="bg-[#191129] border border-purple-500/20 px-4 py-1.5 rounded-full text-xs text-purple-300 font-medium">Post Production</span>
+                    </div>
+                </div>
+            </div>
+
+        </div>
+    </section>
+
+    <section id="contact" class="py-24 bg-gradient-to-b from-[#08040e] to-[#0d0817] px-6">
+        <div class="max-w-3xl mx-auto bg-[#130d22] rounded-3xl p-8 md:p-12 border border-purple-900/30 shadow-2xl" data-aos="zoom-in-up">
+            <div class="text-center mb-10">
+                <span class="text-purple-brand tracking-[0.25em] text-xs font-bold uppercase block mb-2">Get In Touch</span>
+                <h2 class="text-3xl font-bold text-white">Let's Create Together</h2>
+            </div>
+
+            <form class="space-y-6">
+                <div class="grid md:grid-cols-2 gap-6">
+                    <div>
+                        <label class="block text-xs uppercase font-semibold text-gray-400 tracking-wider mb-2">Your Name</label>
+                        <input type="text" placeholder="John Doe" class="form-input w-full bg-[#1b142c] text-white px-5 py-3.5 rounded-xl border border-purple-900/40 transition-all text-sm">
+                    </div>
+                    <div>
+                        <label class="block text-xs uppercase font-semibold text-gray-400 tracking-wider mb-2">Email Address</label>
+                        <input type="email" placeholder="john@example.com" class="form-input w-full bg-[#1b142c] text-white px-5 py-3.5 rounded-xl border border-purple-900/40 transition-all text-sm">
+                    </div>
+                </div>
+                <div>
+                    <label class="block text-xs uppercase font-semibold text-gray-400 tracking-wider mb-2">Message</label>
+                    <textarea rows="5" placeholder="Tell me about your upcoming project..." class="form-input w-full bg-[#1b142c] text-white px-5 py-3.5 rounded-xl border border-purple-900/40 transition-all text-sm resize-none"></textarea>
+                </div>
+                
+                <button type="submit" class="w-full bg-purple-brand text-white font-bold py-4 rounded-xl text-sm tracking-wide shadow-lg shadow-purple-500/20 hover:bg-purple-700 transition-colors transform active:scale-[0.99]">
+                    Send Message <i class="fa-solid fa-paper-plane ml-2 text-xs"></i>
+                </button>
+            </form>
+        </div>
+    </section>
+
+    <footer class="border-t border-purple-900/20 bg-[#0b0712] py-12 px-6">
+        <div class="max-w-7xl mx-auto flex flex-col md:flex-row items-center justify-between gap-6">
+            <div class="text-center md:text-left">
+                <p class="text-sm font-bold text-white tracking-wider uppercase mb-1">Empowering Brands</p>
+                <p class="text-xs text-gray-500">&copy; 2026 Creative Portfolio. All rights reserved.</p>
+            </div>
+            
+            <div class="flex space-x-6 text-lg">
+                <a href="#" class="text-gray-400 hover:text-purple-brand transition-colors"><i class="fa-brands fa-linkedin"></i></a>
+                <a href="#" class="text-gray-400 hover:text-purple-brand transition-colors"><i class="fa-brands fa-behance"></i></a>
+                <a href="#" class="text-gray-400 hover:text-purple-brand transition-colors"><i class="fa-brands fa-instagram"></i></a>
+                <a href="#" class="text-gray-400 hover:text-purple-brand transition-colors"><i class="fa-brands fa-dribbble"></i></a>
+            </div>
+        </div>
+    </footer>
+
+    <script src="https://unpkg.com/aos@2.3.1/dist/aos.js"></script>
+    <script>
+        // Initialize On-Scroll Smooth Animation Framework
+        AOS.init({
+            duration: 900,
+            once: true,
+            offset: 100
+        });
+
+        // ==========================================
+        //  IMAGE PAGINATION / SLIDER ENGINE
+        // ==========================================
+        let currentSlideIndex = 0;
+        const slides = document.querySelectorAll('.slide');
+        const dots = document.querySelectorAll('.dot');
+
+        function showSlide(index) {
+            if (index >= slides.length) currentSlideIndex = 0;
+            else if (index < 0) currentSlideIndex = slides.length - 1;
+            else currentSlideIndex = index;
+
+            slides.forEach((slide) => slide.classList.remove('active'));
+            dots.forEach((dot) => {
+                dot.classList.remove('bg-purple-brand', 'w-6');
+                dot.classList.add('bg-purple-800');
+            });
+
+            slides[currentSlideIndex].classList.add('active');
+            dots[currentSlideIndex].classList.add('bg-purple-brand', 'w-6');
+            dots[currentSlideIndex].classList.remove('bg-purple-800');
+        }
+
+        function nextSlide() { showSlide(currentSlideIndex + 1); }
+        function prevSlide() { showSlide(currentSlideIndex - 1); }
+        function currentSlide(index) { showSlide(index); }
+
+        // Auto-cycle work projects every 8 seconds
+        setInterval(nextSlide, 8000);
+
+
+        // ==========================================
+        //  RANDOM VIDEO HUB CONTROLLER
+        // ==========================================
+        const videoRepository = [
+            { url: "0413(3).mp4", title: "Project Video 1" },
+            { url: "ANGEL COOKS CORRECTION DONE.mp4", title: "Project Video 2" },
+            { url: "ANGEL COPERATION GALA SOUND .mp4", title: "Project Video 3" },
+            { url: "Angel Gala New.mp4", title: "Project Video 4" },
+            { url: "Angel Tv Sports.mp4", title: "Project Video 5" },
+            { url: "GHANA MONTH.mp4", title: "Project Video 6" },
+        ];
+
+        // Loads a randomized showcase item on setup layout execution
+
+        function initRandomVideo() {
+            const randomIndex = Math.floor(Math.random() * videoRepository.length);
+            const selectedVideo = videoRepository[randomIndex];
+            playSelectedVideo(selectedVideo.url, selectedVideo.title);
+        }
+
+        // Updates video feature component dynamically for local MP4s
+        function playSelectedVideo(videoPath, titleText) {
+            const videoPlayer = document.getElementById('mainFeaturedPlayer');
+            const videoSource = document.getElementById('videoSource');
+            const titleHeader = document.getElementById('mainVideoTitle');
+            if (videoSource && videoPlayer) {
+                videoSource.src = videoPath;
+                videoPlayer.load();
+                // Try to play, but catch promise errors (autoplay block)
+                videoPlayer.play().catch(() => {});
+            }
+            if (titleHeader) {
+                titleHeader.innerText = titleText;
+            }
+        }
+
+        // Run video engine load setup
+        window.addEventListener('DOMContentLoaded', initRandomVideo);
+
+        // Smooth Navbar Shrink transition effect on document scroll 
+        window.addEventListener('scroll', () => {
+            const nav = document.querySelector('nav');
+            if (window.scrollY > 40) {
+                nav.classList.remove('h-20');
+                nav.classList.add('h-16', 'shadow-xl');
+            } else {
+                nav.classList.remove('h-16', 'shadow-xl');
+                nav.classList.add('h-20');
+            }
+        });
+    </script>
+</body>
+</html>
